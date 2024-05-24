@@ -1,5 +1,5 @@
 # MNet2
-Open-source, internet web-browser <br />
+Open-source, internet web browser; also, the replacement for MNet <br />
 **v1.0** <br />
 ## Features
 - Private web browser
