@@ -5,6 +5,7 @@ from googletrans import Translator
 class Mnet2:
     def __init__(self, text, lang: str = 'en'):
         self.text: str = ""
+        self.lang = lang
         
         if lang != 'en':
             translator = Translator()
@@ -17,6 +18,10 @@ class Mnet2:
         results = search[0]['body']
         self.links = search[0]['href']
         self.title = search[0]['title']
+        
+        if self.lang != 'en':
+            translator = Translator()
+            results = translator.translate(results, dest=self.lang).text
         
         return results
     
